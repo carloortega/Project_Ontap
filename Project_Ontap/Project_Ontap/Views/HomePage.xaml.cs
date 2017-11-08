@@ -54,13 +54,20 @@ namespace Project_Ontap.Views
                 TargetType = typeof(AboutVersion)
             };
 
+            var logout = new MenuItem.MenuItem()
+            {
+                Title = "L o g o u t",
+                TargetType = typeof(MainPage)
+            };
+
             menulist.Add(target);
             menulist.Add(clients);
             menulist.Add(performance);
             menulist.Add(summary);
             menulist.Add(settings);
             menulist.Add(about);
-            
+            menulist.Add(logout);
+
 
             listView.ItemsSource = menulist;
 

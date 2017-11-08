@@ -7,6 +7,8 @@ namespace Project_Ontap.Views
         public MainPage()
         {
             InitializeComponent();
+
+            NavigationPage.SetHasNavigationBar(this, false);
         }
     }
 }
