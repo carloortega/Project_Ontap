@@ -1,0 +1,11 @@
+﻿<resources>
+  <color name="primary">#12232d</color>
+  <color name="primaryDark">#12232d</color>
+  <color name="accent">#6db4dd</color>
+  <color name="window_background">#F5F5F5</color>
+
+  <color name="entry_background">#ffffff</color>
+  <color name="entry_border">#BDBDBD</color>
+
+  <color name="ListViewSelected">#12232d</color>
+</resources>

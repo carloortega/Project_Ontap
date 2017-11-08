@@ -1,0 +1,68 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:prism="clr-namespace:Prism.Mvvm;assembly=Prism.Forms"
+             prism:ViewModelLocator.AutowireViewModel="True"
+             x:Class="Project_Ontap.Views.About"
+             BackgroundImage="ontap_bgwhite">
+    <Grid RowSpacing="2" ColumnSpacing="2">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="2*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="1*" />
+            <ColumnDefinition Width="*" />
+        </Grid.ColumnDefinitions>
+
+        <Label Text="M O N T H L Y" TextColor="#6db4dd"
+                 FontSize="25" FontAttributes="Bold"
+                 Grid.Row="0" Grid.Column="1" Margin="0,130,0,0"></Label>
+
+        <Label Text="P E R F O R M A N C E" TextColor="Black" FontSize="12"
+               Grid.Row="0" Grid.Column="1" Margin="0,160,0,0"></Label>
+
+        <BoxView BackgroundColor="#12232d"
+                 Grid.Row="2" Grid.Column="0"
+                 Grid.RowSpan="2" Grid.ColumnSpan="2"></BoxView>
+        <Image Source="target_dashboard"
+               Grid.Row="2" Grid.Column="0" 
+               Margin="0,2,0,0" HorizontalOptions="FillAndExpand"
+               VerticalOptions="FillAndExpand" Aspect="AspectFill">
+            <Image.GestureRecognizers>
+                <TapGestureRecognizer Tapped="Goto_Target"/>
+            </Image.GestureRecognizers>
+        </Image>
+        
+        <Image Source="client_dashboard"
+               Grid.Row="2" Grid.Column="1"
+               Margin="0,2,0,0" HorizontalOptions="FillAndExpand"
+               VerticalOptions="FillAndExpand" Aspect="AspectFill">
+            <Image.GestureRecognizers>
+                <TapGestureRecognizer Tapped="Goto_Clients"/>
+            </Image.GestureRecognizers>
+        </Image>
+        
+        <Image Source="performance_dashboard" 
+               Grid.Row="3" Grid.Column="0" 
+               HorizontalOptions="FillAndExpand" 
+               VerticalOptions="FillAndExpand" Aspect="AspectFill">
+            <Image.GestureRecognizers>
+                <TapGestureRecognizer Tapped="Goto_Performance"/>
+            </Image.GestureRecognizers>
+        </Image>
+
+        <Image Source="summary_dashboard" 
+               Grid.Row="3" Grid.Column="1" 
+               HorizontalOptions="FillAndExpand"
+               VerticalOptions="FillAndExpand" Aspect="AspectFill">
+            <Image.GestureRecognizers>
+                <TapGestureRecognizer Tapped="Goto_Summary"/>
+            </Image.GestureRecognizers>
+        </Image>
+
+    </Grid>
+</ContentPage>
