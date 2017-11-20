@@ -1,0 +1,74 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Project_Ontap.Views.ClientCall"
+             Title="Client Call Summary">
+
+    <StackLayout>
+        <StackLayout HeightRequest="350">
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*"/>
+                </Grid.RowDefinitions>
+
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*" />
+                </Grid.ColumnDefinitions>
+
+                <Image Source="navdrawer_bg" HorizontalOptions="FillAndExpand" Aspect="AspectFill"
+                               Grid.Row="0" Grid.Column="0"/>
+
+                <Image Source="verify2" Grid.Row="0" Grid.Column="0" HeightRequest="20" WidthRequest="20" VerticalOptions="End" Margin="0,0,50,15"></Image>
+
+                <Image Source="cancel" Grid.Row="0" Grid.Column="0" HeightRequest="20" WidthRequest="20" VerticalOptions="End" Margin="50,0,0,15"></Image>
+
+                <Label Text="Service 101 Plus Consulting Inc" TextColor="Black" FontSize="12"
+                       Grid.Row="0" Grid.Column="0" FontAttributes="Bold" Margin="0,0,0,40"
+                       VerticalOptions="End" HorizontalOptions="CenterAndExpand"></Label>
+            </Grid>
+
+            <StackLayout Orientation="Horizontal">
+
+                <Label Text="Target:" TextColor="Black" FontSize="12" Margin="20,5,0,5" HorizontalOptions="Start"></Label>
+
+                <Label Text="6" TextColor="Black" FontSize="12" Margin="0,5,20,0" HorizontalOptions="EndAndExpand"></Label>
+
+            </StackLayout>
+
+            <BoxView BackgroundColor="#ebebeb" HorizontalOptions="FillAndExpand" HeightRequest="1"/>
+
+            <StackLayout Orientation="Horizontal">
+
+                <Label Text="Completed:" TextColor="Black" FontSize="12" Margin="20,5,0,5" HorizontalOptions="Start"></Label>
+
+                <Label Text="3" TextColor="Black" FontSize="12" Margin="0,5,20,0" HorizontalOptions="EndAndExpand"></Label>
+
+            </StackLayout>
+
+            <BoxView BackgroundColor="#ebebeb" HorizontalOptions="FillAndExpand" HeightRequest="1"/>
+
+            <StackLayout Orientation="Horizontal">
+
+                <Label Text="Missed:" TextColor="Black" FontSize="12" Margin="20,5,0,5" HorizontalOptions="Start"></Label>
+
+                <Label Text="0" TextColor="Black" FontSize="12" Margin="0,5,20,0" HorizontalOptions="EndAndExpand"></Label>
+
+            </StackLayout>
+
+            <BoxView BackgroundColor="#ebebeb" HorizontalOptions="FillAndExpand" HeightRequest="1"/>
+
+            <StackLayout Orientation="Horizontal">
+
+                <Label Text="Last Covered On:" TextColor="Black" FontSize="12" Margin="20,5,0,5" HorizontalOptions="Start"></Label>
+
+                <Label Text="Nov/11/17" TextColor="Black" FontSize="12" Margin="0,5,20,0" HorizontalOptions="EndAndExpand"></Label>
+
+            </StackLayout>
+
+            <BoxView BackgroundColor="#ebebeb" HorizontalOptions="FillAndExpand" HeightRequest="1"/>
+
+            <Label Text="Call History:" TextColor="Black" FontSize="12" Margin="20,5,0,5"></Label>
+
+        </StackLayout>
+    </StackLayout>
+</ContentPage>

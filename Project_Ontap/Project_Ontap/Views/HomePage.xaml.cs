@@ -24,7 +24,7 @@ namespace Project_Ontap.Views
             {
                 Title = "C l i e n t s",
                 Icon = "clients.png",
-                TargetType = typeof(ClientList)
+                TargetType = typeof(ClientCall)
             };
 
             var performance = new MenuItem.MenuItem()
