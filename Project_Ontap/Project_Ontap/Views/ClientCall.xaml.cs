@@ -15,6 +15,12 @@ namespace Project_Ontap.Views
         public ClientCall()
         {
             InitializeComponent();
+
+            ContactPerson.Items.Add("Andrew Javier");
+            ContactPerson.Items.Add("Harold Balano");
+            ContactPerson.Items.Add("Eugene Santos");
+            ContactPerson.Items.Add("Jiven Tabien");
+            ContactPerson.Items.Add("Joshua Jerezo");
         }
     }
 }

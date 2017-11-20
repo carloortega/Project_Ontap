@@ -17,7 +17,7 @@ namespace Project_Ontap.Views
 
         private void Goto_Clients(object sender, EventArgs e)
         {
-            Navigation.PushAsync(new ClientCall());
+            Navigation.PushAsync(new ClientSummary());
         }
 
         private void Goto_Performance(object sender, EventArgs e)

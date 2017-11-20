@@ -42,6 +42,7 @@
     <Compile Include="ViewModels\AboutViewModel.cs" />
     <Compile Include="ViewModels\CallsSummaryViewModel.cs" />
     <Compile Include="ViewModels\ClientListViewModel.cs" />
+    <Compile Include="ViewModels\ClientSummaryViewModel.cs" />
     <Compile Include="ViewModels\HomePageViewModel.cs" />
     <Compile Include="ViewModels\MainPageViewModel.cs" />
     <Compile Include="ViewModels\PerformanceViewModel.cs" />
@@ -54,6 +55,9 @@
     </Compile>
     <Compile Include="Views\ClientList.xaml.cs">
       <DependentUpon>ClientList.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\ClientSummary.xaml.cs">
+      <DependentUpon>ClientSummary.xaml</DependentUpon>
     </Compile>
     <Compile Include="Views\Performance.xaml.cs">
       <DependentUpon>Performance.xaml</DependentUpon>
@@ -168,6 +172,12 @@
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="Views\ClientCall.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Views\ClientSummary.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
       <SubType>Designer</SubType>
     </EmbeddedResource>

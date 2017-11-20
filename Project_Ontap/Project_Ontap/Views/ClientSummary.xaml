@@ -1,9 +1,10 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="Project_Ontap.Views.ClientCall"
-             Title="Client Call">
-
+             xmlns:prism="clr-namespace:Prism.Mvvm;assembly=Prism.Forms"
+             prism:ViewModelLocator.AutowireViewModel="True"
+             x:Class="Project_Ontap.Views.ClientSummary"
+             Title="Client Call Summary">
     <StackLayout>
         <StackLayout HeightRequest="350">
             <Grid>
@@ -18,7 +19,11 @@
                 <Image Source="navdrawer_bg" HorizontalOptions="FillAndExpand" Aspect="AspectFill"
                                Grid.Row="0" Grid.Column="0"/>
 
-                <Image Source="verify" Grid.Row="0" Grid.Column="0" HeightRequest="20" WidthRequest="20" VerticalOptions="End" Margin="0,0,50,15"></Image>
+                <Image Source="verify2" Grid.Row="0" Grid.Column="0" HeightRequest="20" WidthRequest="20" VerticalOptions="End" Margin="0,0,50,15">
+                    <Image.GestureRecognizers>
+                        <TapGestureRecognizer Tapped="GoTo_ClientCall"/>
+                    </Image.GestureRecognizers>
+                </Image>
 
                 <Image Source="cancel" Grid.Row="0" Grid.Column="0" HeightRequest="20" WidthRequest="20" VerticalOptions="End" Margin="50,0,0,15"></Image>
 
@@ -29,9 +34,9 @@
 
             <StackLayout Orientation="Horizontal">
 
-                <Label Text="Date:" TextColor="Black" FontSize="12" Margin="20,5,0,5" HorizontalOptions="Start"></Label>
+                <Label Text="Target:" TextColor="Black" FontSize="12" Margin="20,5,0,5" HorizontalOptions="Start"></Label>
 
-                <Label Text="Nov/20/17" TextColor="Black" FontSize="12" Margin="0,5,20,0" HorizontalOptions="EndAndExpand"></Label>
+                <Label Text="6" TextColor="Black" FontSize="12" Margin="0,5,20,0" HorizontalOptions="EndAndExpand"></Label>
 
             </StackLayout>
 
@@ -39,7 +44,7 @@
 
             <StackLayout Orientation="Horizontal">
 
-                <Label Text="Contact Person:" TextColor="Black" FontSize="12" Margin="20,5,0,5" HorizontalOptions="Start"></Label>
+                <Label Text="Completed:" TextColor="Black" FontSize="12" Margin="20,5,0,5" HorizontalOptions="Start"></Label>
 
                 <Label Text="3" TextColor="Black" FontSize="12" Margin="0,5,20,0" HorizontalOptions="EndAndExpand"></Label>
 
@@ -49,11 +54,9 @@
 
             <StackLayout Orientation="Horizontal">
 
-                <Label Text="Status:" TextColor="Black" FontSize="12" Margin="20,5,0,5" HorizontalOptions="Start"></Label>
+                <Label Text="Missed:" TextColor="Black" FontSize="12" Margin="20,5,0,5" HorizontalOptions="Start"></Label>
 
-                <Picker x:Name="ContactPerson" HorizontalOptions="Center"></Picker>
-
-                <!--<Label Text="0" TextColor="Black" FontSize="12" Margin="0,5,20,0" HorizontalOptions="EndAndExpand"></Label>-->
+                <Label Text="0" TextColor="Black" FontSize="12" Margin="0,5,20,0" HorizontalOptions="EndAndExpand"></Label>
 
             </StackLayout>
 
@@ -61,17 +64,15 @@
 
             <StackLayout Orientation="Horizontal">
 
-                <Label Text="Capture Image:" TextColor="Black" FontSize="12" Margin="20,5,0,5" HorizontalOptions="Start"></Label>
+                <Label Text="Last Covered On:" TextColor="Black" FontSize="12" Margin="20,5,0,5" HorizontalOptions="Start"></Label>
 
-                <Image Source="capture" HeightRequest="20" WidthRequest="20" Margin="20,5,15,0" HorizontalOptions="EndAndExpand"></Image>
+                <Label Text="Nov/11/17" TextColor="Black" FontSize="12" Margin="0,5,20,0" HorizontalOptions="EndAndExpand"></Label>
 
             </StackLayout>
 
             <BoxView BackgroundColor="#ebebeb" HorizontalOptions="FillAndExpand" HeightRequest="1"/>
 
-            <Label Text="Remarks:" TextColor="Black" FontSize="12" Margin="20,5,0,5"></Label>
-
-            <BoxView BackgroundColor="#ebebeb" HorizontalOptions="FillAndExpand" HeightRequest="1"/>
+            <Label Text="Call History:" TextColor="Black" FontSize="12" Margin="20,5,0,5"></Label>
 
         </StackLayout>
     </StackLayout>
