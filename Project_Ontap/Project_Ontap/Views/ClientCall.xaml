@@ -5,7 +5,7 @@
              Title="Client Call">
 
     <StackLayout>
-        <StackLayout HeightRequest="350">
+        <StackLayout HeightRequest="420">
             <Grid>
                 <Grid.RowDefinitions>
                     <RowDefinition Height="*"/>
@@ -39,9 +39,9 @@
 
             <StackLayout Orientation="Horizontal">
 
-                <Label Text="Contact Person:" TextColor="Black" FontSize="12" Margin="20,5,0,5" HorizontalOptions="Start"></Label>
+                <Label Text="Contact Person:" TextColor="Black" FontSize="12" Margin="20,10,0,5" HorizontalOptions="Start"></Label>
 
-                <Label Text="3" TextColor="Black" FontSize="12" Margin="0,5,20,0" HorizontalOptions="EndAndExpand"></Label>
+                <Picker x:Name="ContactPerson" HeightRequest="40" WidthRequest="150" HorizontalOptions="EndAndExpand" Title="Contact person"></Picker>
 
             </StackLayout>
 
@@ -49,11 +49,9 @@
 
             <StackLayout Orientation="Horizontal">
 
-                <Label Text="Status:" TextColor="Black" FontSize="12" Margin="20,5,0,5" HorizontalOptions="Start"></Label>
+                <Label Text="Status:" TextColor="Black" FontSize="12" Margin="20,10,0,5" HorizontalOptions="Start"></Label>
 
-                <Picker x:Name="ContactPerson" HorizontalOptions="Center"></Picker>
-
-                <!--<Label Text="0" TextColor="Black" FontSize="12" Margin="0,5,20,0" HorizontalOptions="EndAndExpand"></Label>-->
+                <Picker x:Name="ClientStatus" HeightRequest="40" WidthRequest="150" VerticalOptions="EndAndExpand" HorizontalOptions="EndAndExpand" Title="Status"></Picker>
 
             </StackLayout>
 
@@ -63,13 +61,19 @@
 
                 <Label Text="Capture Image:" TextColor="Black" FontSize="12" Margin="20,5,0,5" HorizontalOptions="Start"></Label>
 
-                <Image Source="capture" HeightRequest="20" WidthRequest="20" Margin="20,5,15,0" HorizontalOptions="EndAndExpand"></Image>
+                <Image Source="capture" HeightRequest="15" WidthRequest="20" Margin="20,5,15,0" HorizontalOptions="EndAndExpand"></Image>
 
             </StackLayout>
 
             <BoxView BackgroundColor="#ebebeb" HorizontalOptions="FillAndExpand" HeightRequest="1"/>
 
-            <Label Text="Remarks:" TextColor="Black" FontSize="12" Margin="20,5,0,5"></Label>
+            <StackLayout Orientation="Vertical">
+
+                <Label Text="Remarks:" TextColor="Black" FontSize="12" Margin="20,5,0,0"></Label>
+
+                <Editor HorizontalOptions="FillAndExpand" Margin="15,0,15,0" FontSize="12" TextColor="#696969"/>
+
+            </StackLayout>
 
             <BoxView BackgroundColor="#ebebeb" HorizontalOptions="FillAndExpand" HeightRequest="1"/>
 

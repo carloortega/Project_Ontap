@@ -125,11 +125,9 @@
     <Compile Include="CustomButton_Login.cs" />
     <Compile Include="CustomEntry_Password.cs" />
     <Compile Include="CustomEntry_Username.cs" />
-    <Compile Include="ISQLite.cs" />
     <Compile Include="MainActivity.cs" />
     <Compile Include="Resources\Resource.Designer.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="SqliteService.cs" />
   </ItemGroup>
   <ItemGroup>
     <AndroidAsset Include="Assets\Ontap.db" />

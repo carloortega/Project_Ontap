@@ -21,6 +21,9 @@ namespace Project_Ontap.Views
             ContactPerson.Items.Add("Eugene Santos");
             ContactPerson.Items.Add("Jiven Tabien");
             ContactPerson.Items.Add("Joshua Jerezo");
+
+            ClientStatus.Items.Add("Completed");
+            ClientStatus.Items.Add("Missed");
         }
     }
 }
