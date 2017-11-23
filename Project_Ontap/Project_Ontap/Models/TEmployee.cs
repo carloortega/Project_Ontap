@@ -8,8 +8,8 @@ using System.Threading.Tasks;
 namespace Project_Ontap.Models
 {
 
-    [Table("tAttendance")]
-    public class TAttendance
+    [Table("tEmployee")]
+    public class TEmployee
     {
 
         [PrimaryKey, AutoIncrement]
@@ -17,11 +17,19 @@ namespace Project_Ontap.Models
 
         public string EmployeeID { get; set; }
 
-        public string AttendanceDate { get; set; }
+        public string EmailAddress { get; set; }
 
-        public string TimeIn { get; set; }
+        public string Role { get; set; }
 
-        public string TimeOut { get; set; }
+        public string FirstName { get; set; }
+
+        public string LastName { get; set; }
+
+        public string ContactNumber { get; set; }
+
+        public string UserImage { get; set; }
+
+        public string MobileAppVersion { get; set; }
 
         public string CompID { get; set; }
 

@@ -7,6 +7,7 @@ using System.Threading.Tasks;
 
 namespace Project_Ontap.Models
 {
+
     [Table("tClient")]
     public class TClient
     {

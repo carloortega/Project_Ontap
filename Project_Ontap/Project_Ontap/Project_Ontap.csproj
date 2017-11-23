@@ -42,6 +42,10 @@
     <Compile Include="Models\TClientCall.cs" />
     <Compile Include="Models\TClientClass.cs" />
     <Compile Include="Models\TClientContacts.cs" />
+    <Compile Include="Models\TClientType.cs" />
+    <Compile Include="Models\TCompany.cs" />
+    <Compile Include="Models\TDistrict.cs" />
+    <Compile Include="Models\TEmployee.cs" />
     <Compile Include="Models\TUserLogin.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="ViewModels\AboutVersionViewModel.cs" />

@@ -7,19 +7,16 @@ using System.Threading.Tasks;
 
 namespace Project_Ontap.Models
 {
-
-    [Table("tClientClass")]
-    public class TClientClass
+    [Table("tClientType")]
+    public class TClientType
     {
 
         [PrimaryKey, AutoIncrement]
         public int ID { get; set; }
 
-        public string ClientClassCode { get; set; }
+        public string ClientTypeID { get; set; }
 
-        public string Description { get; set; }
-
-        public string Frequency { get; set; }
+        public string Desciption { get; set; }
 
         public string CompID { get; set; }
 
