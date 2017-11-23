@@ -39,6 +39,9 @@
     <Compile Include="MenuItem\MenuItem.cs" />
     <Compile Include="Models\TAttendance.cs" />
     <Compile Include="Models\TClient.cs" />
+    <Compile Include="Models\TClientCall.cs" />
+    <Compile Include="Models\TClientClass.cs" />
+    <Compile Include="Models\TClientContacts.cs" />
     <Compile Include="Models\TUserLogin.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="ViewModels\AboutVersionViewModel.cs" />
