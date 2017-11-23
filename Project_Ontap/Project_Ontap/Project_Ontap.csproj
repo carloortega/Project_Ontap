@@ -46,7 +46,15 @@
     <Compile Include="Models\TCompany.cs" />
     <Compile Include="Models\TDistrict.cs" />
     <Compile Include="Models\TEmployee.cs" />
+    <Compile Include="Models\TNational.cs" />
+    <Compile Include="Models\TRegion.cs" />
+    <Compile Include="Models\TRoutingArea.cs" />
+    <Compile Include="Models\TSelectedRoutes.cs" />
+    <Compile Include="Models\TTemporaryRoutes.cs" />
+    <Compile Include="Models\TTerritory.cs" />
+    <Compile Include="Models\TTerritoryStructure.cs" />
     <Compile Include="Models\TUserLogin.cs" />
+    <Compile Include="Models\TWorkingDays.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="ViewModels\AboutVersionViewModel.cs" />
     <Compile Include="ViewModels\AboutViewModel.cs" />
