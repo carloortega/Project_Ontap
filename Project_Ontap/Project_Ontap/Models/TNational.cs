@@ -1,4 +1,4 @@
-﻿using SQLite.Net.Attributes;
+﻿using SQLite;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -12,15 +12,19 @@ namespace Project_Ontap.Models
     public class TNational
     {
 
-        [PrimaryKey, AutoIncrement]
+        [PrimaryKey, AutoIncrement, Column("ID")]
         public int ID { get; set; }
 
+        [Column("NationalID")]
         public string NationalID { get; set; }
 
+        [Column("NationalName")]
         public string NationalName { get; set; }
 
+        [Column("EmployeeID")]
         public string EmployeeID { get; set; }
 
+        [Column("CompID")]
         public string CompID { get; set; }
 
     }

@@ -1,4 +1,4 @@
-﻿using SQLite.Net.Attributes;
+﻿using SQLite;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -12,17 +12,22 @@ namespace Project_Ontap.Models
     public class TTerritoryStructure
     {
 
-        [PrimaryKey, AutoIncrement]
+        [PrimaryKey, AutoIncrement, Column("ID")]
         public int ID { get; set; }
 
+        [Column("NationalID")]
         public string NationalID { get; set; }
 
+        [Column("RegionID")]
         public string RegionID { get; set; }
 
+        [Column("DistrictID")]
         public string DistrictID { get; set; }
 
+        [Column("TerritoryID")]
         public string TerritoryID { get; set; }
 
+        [Column("CompID")]
         public string CompID { get; set; }
 
     }
