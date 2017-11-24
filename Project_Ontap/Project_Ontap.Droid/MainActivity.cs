@@ -23,8 +23,6 @@ namespace Project_Ontap.Droid
 
             global::Xamarin.Forms.Forms.Init(this, bundle);
 
-            //string dbPath = FileAccessHelper.GetLocalFilePath("Ontap.db");
-
             LoadApplication(new App(new AndroidInitializer()));
         }
     }

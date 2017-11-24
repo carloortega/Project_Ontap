@@ -137,7 +137,7 @@
     <Compile Include="CustomButton_Login.cs" />
     <Compile Include="CustomEntry_Password.cs" />
     <Compile Include="CustomEntry_Username.cs" />
-    <Compile Include="FileAccessHelper.cs" />
+    <Compile Include="FileHelper_Droid.cs" />
     <Compile Include="MainActivity.cs" />
     <Compile Include="Resources\Resource.Designer.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

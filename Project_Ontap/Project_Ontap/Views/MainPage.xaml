@@ -37,12 +37,12 @@
             Grid.RowSpan="3"   Grid.ColumnSpan="8" 
             Margin="20,5,20,0"></Image>
 
-        <customRenderer:CustomEntryUsername x:Name="Username"
+        <customRenderer:CustomEntryUsername Text="{Binding Username}" x:Name="Username"
             Grid.Row="4" Grid.Column="0" Grid.ColumnSpan="8" 
             HorizontalTextAlignment="Center"
             FontSize="12" TextColor="#696969" Margin="20,0,20,0"/>
 
-        <customRenderer:CustomEntryPassword x:Name="Password"
+        <customRenderer:CustomEntryPassword Text="{Binding Password}" x:Name="Password"
             Grid.Row="5" Grid.Column="0" Grid.ColumnSpan="8" 
             HorizontalTextAlignment="Center"
             FontSize="12" TextColor="#696969" Margin="20,0,20,0"

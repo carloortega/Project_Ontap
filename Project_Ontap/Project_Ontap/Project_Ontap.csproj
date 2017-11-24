@@ -36,6 +36,8 @@
   </PropertyGroup>
   <ItemGroup>
     <Compile Include="CustomRenderer\CustomButton.cs" />
+    <Compile Include="Data\RecordsDatabase.cs" />
+    <Compile Include="IFileHelper.cs" />
     <Compile Include="MenuItem\MenuItem.cs" />
     <Compile Include="Models\TAttendance.cs" />
     <Compile Include="Models\TClient.cs" />

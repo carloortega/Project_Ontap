@@ -1,11 +1,19 @@
 ﻿using Prism.Unity;
+using Project_Ontap.Data;
 using Project_Ontap.Views;
 using Xamarin.Forms;
+using Xamarin.Forms.Xaml;
 
+[assembly: XamlCompilation(XamlCompilationOptions.Compile)]
 namespace Project_Ontap
 {
     public partial class App : PrismApplication
     {
+
+        static RecordsDatabase database;
+
+        public App() : this(null) { }
+
         public App(IPlatformInitializer initializer = null) : base(initializer) { }
 
         protected override void OnInitialized()
@@ -14,6 +22,21 @@ namespace Project_Ontap
 
             NavigationService.NavigateAsync("MainPage");
         }
+
+        public static RecordsDatabase Database
+        {
+            get
+            {
+                if (database == null)
+                {
+                    database = new RecordsDatabase(DependencyService.Get<IFileHelper>().GetLocalFilePath("dbTest3.db3"));
+                }
+                return database;
+            }
+        }
+        public int ResumeAtTodoId { get; set; }
+
+
 
         protected override void RegisterTypes()
         {
