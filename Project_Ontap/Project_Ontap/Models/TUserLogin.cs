@@ -35,5 +35,9 @@ namespace Project_Ontap.Models
         [Column("SyncStatus")]
         public string SyncStatus { get; set; }
 
+        public static implicit operator string(TUserLogin v)
+        {
+            throw new NotImplementedException();
+        }
     }
 }

@@ -29,7 +29,7 @@
                             <Label x:Name="fullname" Text="Juan Dela Cruz" TextColor="Black" FontAttributes="Bold"
                                Grid.Row="0" Grid.Column="0" VerticalOptions="End" Margin="20,0,0,25"/>
 
-                            <Label x:Name="email" Text="juandelacruz@gmail.com" TextColor="Black"
+                            <Label x:Name="email" Text="{Binding Username}" TextColor="Black"
                                Grid.Row="0" Grid.Column="0" VerticalOptions="End" Margin="20,0,0,10"/>
 
                         </Grid>

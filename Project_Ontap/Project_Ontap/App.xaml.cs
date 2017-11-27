@@ -4,7 +4,6 @@ using Project_Ontap.Views;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
-[assembly: XamlCompilation(XamlCompilationOptions.Compile)]
 namespace Project_Ontap
 {
     public partial class App : PrismApplication
@@ -29,7 +28,7 @@ namespace Project_Ontap
             {
                 if (database == null)
                 {
-                    database = new RecordsDatabase(DependencyService.Get<IFileHelper>().GetLocalFilePath("dbTest3.db3"));
+                    database = new RecordsDatabase(DependencyService.Get<IFileHelper>().GetLocalFilePath("Ontap.db"));
                 }
                 return database;
             }

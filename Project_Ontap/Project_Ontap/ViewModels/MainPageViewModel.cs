@@ -42,16 +42,23 @@ namespace Project_Ontap.ViewModels
 
         private async void Navigate()
         {
+            
+            //var Username = await App.Database.GetEmailAddress(_username);
+            var Password = await App.Database.GetAccount(_username, _password);
 
-
-            String String_Username = _username;
-            String String_Password = _password;
-
-            var Username = await App.Database.GetEmailAddress(String_Username);
-            var Password = await App.Database.GetEmailAddress(String_Password);
-
-
-            if (String_Username.Equals("test"))
+            if (_username == null && _password == null)
+            {
+                await App.Current.MainPage.DisplayActionSheet("Login details required", "Ok", "");
+            }
+            else if (_username == null || _password == null)
+            {
+                await App.Current.MainPage.DisplayActionSheet("Please complete your login details","Ok","");
+            }
+            else if (Password == null)
+            {
+                await App.Current.MainPage.DisplayActionSheet("Invalid login details", "Ok", "");
+            }
+            else if (Password != null)
             {
                 await _navigationService.NavigateAsync("/HomePage/NavigationPage/About");
             }
