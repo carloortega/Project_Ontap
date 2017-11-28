@@ -26,7 +26,7 @@
                             <controls:CircleImage Source="black" HeightRequest="60" WidthRequest="60"
                                VerticalOptions="StartAndExpand" Margin="0,10,230,0"/>
 
-                            <Label x:Name="fullname" Text="Juan Dela Cruz" TextColor="Black" FontAttributes="Bold"
+                            <Label x:Name="fullname" Text="{Binding Fullname}" TextColor="Black" FontSize="Large" FontAttributes="Bold"
                                Grid.Row="0" Grid.Column="0" VerticalOptions="End" Margin="20,0,0,25"/>
 
                             <Label x:Name="email" Text="{Binding Username}" TextColor="Black"

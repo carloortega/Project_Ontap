@@ -45,21 +45,24 @@ namespace Project_Ontap.ViewModels
             
             //var Username = await App.Database.GetEmailAddress(_username);
             var Password = await App.Database.GetAccount(_username, _password);
+            var UserDetails = await App.Database.GetUserDetails(_username);
 
             if (_username == null && _password == null)
             {
-                await App.Current.MainPage.DisplayActionSheet("Login details required", "Ok", "");
+                await App.Current.MainPage.DisplayActionSheet("Username and Password required", "Ok", "");
             }
             else if (_username == null || _password == null)
             {
-                await App.Current.MainPage.DisplayActionSheet("Please complete your login details","Ok","");
+                await App.Current.MainPage.DisplayActionSheet("Username or Password required","Ok","");
             }
             else if (Password == null)
             {
-                await App.Current.MainPage.DisplayActionSheet("Invalid login details", "Ok", "");
+                await App.Current.MainPage.DisplayActionSheet("Username or Password did not match", "Ok", "");
             }
             else if (Password != null)
             {
+                App.Current.Properties["Email"] = UserDetails.EmailAddress;
+                App.Current.Properties["Fullname"] = UserDetails.FirstName + " " + UserDetails.LastName;
                 await _navigationService.NavigateAsync("/HomePage/NavigationPage/About");
             }
         }

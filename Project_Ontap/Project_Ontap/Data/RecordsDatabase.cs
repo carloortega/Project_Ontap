@@ -17,14 +17,14 @@ namespace Project_Ontap.Data
             database = new SQLiteAsyncConnection(dbPath);
         }
 
-        //public Task<TUserLogin> GetEmailAddress(String username)
-        //{
-        //    return database.Table<TUserLogin>().Where(i => i.EmailAddress == username).FirstAsync();
-        //}
-
         public Task<TUserLogin> GetAccount(String username, String password)
         {
             return database.Table<TUserLogin>().Where(i => i.EmailAddress == username && i.Password == password).FirstOrDefaultAsync();
+        }
+
+        public Task<TEmployee> GetUserDetails(String username)
+        {
+            return database.Table<TEmployee>().Where(i => i.EmailAddress == username).FirstOrDefaultAsync();
         }
 
     }
