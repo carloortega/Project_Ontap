@@ -8,15 +8,8 @@ using System.Linq;
 
 namespace Project_Ontap.ViewModels
 {
-	public class ClientSummaryViewModel : BindableBase
-	{
-
-        private string _username;
-        public string Username
-        {
-            get => _username;
-            set => SetProperty(ref _username, value);
-        }
+    public class ClientCallViewModel : BindableBase
+    {
 
         public Chart ChartData { get; set; }
 
@@ -36,10 +29,9 @@ namespace Project_Ontap.ViewModels
 
         };
 
-        public ClientSummaryViewModel()
+        public ClientCallViewModel()
         {
-            Username = App.Current.Properties["Email"].ToString();
             ChartData = PerformanceChart;
         }
-	}
+    }
 }

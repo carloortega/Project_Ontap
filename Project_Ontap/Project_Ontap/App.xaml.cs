@@ -49,6 +49,7 @@ namespace Project_Ontap
             Container.RegisterTypeForNavigation<Performance>();
             Container.RegisterTypeForNavigation<CallsSummary>();
             Container.RegisterTypeForNavigation<ClientSummary>();
+            Container.RegisterTypeForNavigation<ClientCall>();
         }
     }
 }

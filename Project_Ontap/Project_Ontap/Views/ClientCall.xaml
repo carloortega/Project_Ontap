@@ -1,9 +1,10 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="Project_Ontap.Views.ClientCall"
-             Title="Client Call">
-
+             xmlns:prism="clr-namespace:Prism.Mvvm;assembly=Prism.Forms"
+             xmlns:forms="clr-namespace:Microcharts.Forms;assembly=Microcharts.Forms"
+             prism:ViewModelLocator.AutowireViewModel="True"
+             x:Class="Project_Ontap.Views.ClientCall">
     <StackLayout>
         <StackLayout HeightRequest="420">
             <Grid>
@@ -18,11 +19,20 @@
                 <Image Source="navdrawer_bg" HorizontalOptions="FillAndExpand" Aspect="AspectFill"
                                Grid.Row="0" Grid.Column="0"/>
 
+                <forms:ChartView Chart="{Binding ChartData}"
+                       HeightRequest="200" WidthRequest="200" Margin="0,0,0,50"
+                       VerticalOptions="Start" HorizontalOptions="CenterAndExpand"/>
+
+                <Label Text="6" TextColor="Black" FontSize="25" FontAttributes="Bold"
+                       Margin="0,0,0,50" VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand"></Label>
+
+
                 <Image Source="verify" Grid.Row="0" Grid.Column="0" HeightRequest="20" WidthRequest="20" VerticalOptions="End" Margin="0,0,50,15"></Image>
 
                 <Image Source="cancel" Grid.Row="0" Grid.Column="0" HeightRequest="20" WidthRequest="20" VerticalOptions="End" Margin="50,0,0,15"></Image>
 
-                <Label Text="Service 101 Plus Consulting Inc" TextColor="Black" FontSize="12"
+
+                <Label Text="Service 101 Plus Consulting Inc" TextColor="Black" FontSize="15"
                        Grid.Row="0" Grid.Column="0" FontAttributes="Bold" Margin="0,0,0,40"
                        VerticalOptions="End" HorizontalOptions="CenterAndExpand"></Label>
             </Grid>
