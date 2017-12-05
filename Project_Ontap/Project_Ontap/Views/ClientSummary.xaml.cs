@@ -8,10 +8,5 @@ namespace Project_Ontap.Views
         {
             InitializeComponent();
         }
-
-        private void GoTo_ClientCall(object sender, System.EventArgs e)
-        {
-            Navigation.PushAsync(new ClientCall());
-        }
     }
 }

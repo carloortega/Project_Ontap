@@ -37,7 +37,6 @@ namespace Project_Ontap.ViewModels
         {
                 _navigationService = navigationService;
                 NavigationCommand = new DelegateCommand(Navigate);
-
         }
 
         private async void Navigate()
@@ -63,6 +62,8 @@ namespace Project_Ontap.ViewModels
             {
                 App.Current.Properties["Email"] = UserDetails.EmailAddress;
                 App.Current.Properties["Fullname"] = UserDetails.FirstName + " " + UserDetails.LastName;
+                App.Current.Properties["ClientTarget"] = 6;
+                App.Current.Properties["ClientCompleted"] = 4;
                 await _navigationService.NavigateAsync("/HomePage/NavigationPage/About");
             }
         }

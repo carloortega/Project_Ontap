@@ -20,22 +20,28 @@
                 <Image Source="navdrawer_bg" HorizontalOptions="FillAndExpand" Aspect="AspectFill"
                                Grid.Row="0" Grid.Column="0"/>
 
-                <forms:ChartView Chart="{Binding ChartData}" 
+                <forms:ChartView Chart="{Binding ChartData}"
                        HeightRequest="200" WidthRequest="200" Margin="0,0,0,50"
                        VerticalOptions="Start" HorizontalOptions="CenterAndExpand"/>
 
-                <Label Text="6" TextColor="Black" FontSize="25" FontAttributes="Bold"
+                <Label Text="{Binding Target}" TextColor="Black" FontSize="25" FontAttributes="Bold"
                        Margin="0,0,0,50" VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand"></Label>
 
-                <Image Source="verify2" Grid.Row="0" Grid.Column="0" HeightRequest="20" WidthRequest="20" VerticalOptions="End" Margin="0,0,50,15">
+                <Image Source="verify2" Grid.Row="0" Grid.Column="0" HeightRequest="20" WidthRequest="50" 
+                       VerticalOptions="End" HorizontalOptions="Center" Margin="0,0,50,15">
                     <Image.GestureRecognizers>
-                        <TapGestureRecognizer Tapped="GoTo_ClientCall"/>
+                        <TapGestureRecognizer Command="{Binding ClientCall}"/>
                     </Image.GestureRecognizers>
                 </Image>
 
-                <Image Source="cancel" Grid.Row="0" Grid.Column="0" HeightRequest="20" WidthRequest="20" VerticalOptions="End" Margin="50,0,0,15"></Image>
+                <Image Source="cancel" Grid.Row="0" Grid.Column="0" HeightRequest="20" WidthRequest="50"
+                       VerticalOptions="End" HorizontalOptions="Center" Margin="50,0,0,15">
+                    <Image.GestureRecognizers>
+                        <TapGestureRecognizer Command="{Binding ClientList}"/>
+                    </Image.GestureRecognizers>
+                </Image>
 
-                <Label Text="{Binding Username}" TextColor="Black" FontSize="15"
+                <Label Text="{Binding ClientName}" TextColor="Black" FontSize="15"
                        Grid.Row="0" Grid.Column="0" FontAttributes="Bold" Margin="0,0,0,40"
                        VerticalOptions="End" HorizontalOptions="CenterAndExpand"></Label>
             </Grid>
@@ -44,7 +50,7 @@
 
                 <Label Text="Target:" TextColor="Black" FontSize="12" Margin="20,5,0,5" HorizontalOptions="Start"></Label>
 
-                <Label Text="6" TextColor="Black" FontSize="12" Margin="0,5,20,0" HorizontalOptions="EndAndExpand"></Label>
+                <Label Text="{Binding Target}" TextColor="Black" FontSize="12" Margin="0,5,20,0" HorizontalOptions="EndAndExpand"></Label>
 
             </StackLayout>
 
@@ -54,7 +60,7 @@
 
                 <Label Text="Completed:" TextColor="Black" FontSize="12" Margin="20,5,0,5" HorizontalOptions="Start"></Label>
 
-                <Label Text="3" TextColor="Black" FontSize="12" Margin="0,5,20,0" HorizontalOptions="EndAndExpand"></Label>
+                <Label Text="{Binding Completed}" TextColor="Black" FontSize="12" Margin="0,5,20,0" HorizontalOptions="EndAndExpand"></Label>
 
             </StackLayout>
 
@@ -64,7 +70,7 @@
 
                 <Label Text="Missed:" TextColor="Black" FontSize="12" Margin="20,5,0,5" HorizontalOptions="Start"></Label>
 
-                <Label Text="0" TextColor="Black" FontSize="12" Margin="0,5,20,0" HorizontalOptions="EndAndExpand"></Label>
+                <Label Text="{Binding Missed}" TextColor="Black" FontSize="12" Margin="0,5,20,0" HorizontalOptions="EndAndExpand"></Label>
 
             </StackLayout>
 
@@ -74,7 +80,7 @@
 
                 <Label Text="Last Covered On:" TextColor="Black" FontSize="12" Margin="20,5,0,5" HorizontalOptions="Start"></Label>
 
-                <Label Text="Nov/11/17" TextColor="Black" FontSize="12" Margin="0,5,20,0" HorizontalOptions="EndAndExpand"></Label>
+                <Label Text="{Binding LastCoveredOn}" TextColor="Black" FontSize="12" Margin="0,5,20,0" HorizontalOptions="EndAndExpand"></Label>
 
             </StackLayout>
 

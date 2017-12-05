@@ -12,12 +12,12 @@ namespace Project_Ontap.Views
 
         private void Goto_Target(object sender, EventArgs e)
         {
-            Navigation.PushAsync(new AboutVersion());
+            Navigation.PushAsync(new ClientSummary());
         }
 
         private void Goto_Clients(object sender, EventArgs e)
         {
-            Navigation.PushAsync(new ClientSummary());
+            Navigation.PushAsync(new ClientList());
         }
 
         private void Goto_Performance(object sender, EventArgs e)
